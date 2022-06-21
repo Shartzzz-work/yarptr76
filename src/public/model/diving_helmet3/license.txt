@@ -1,0 +1,11 @@
+Model Information:
+* title:	Diving helmet
+* source:	https://sketchfab.com/3d-models/diving-helmet-5073ee26106a467492e4943905c57ce2
+* author:	Nadir Alishly (https://sketchfab.com/nadiralishly)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Diving helmet" (https://sketchfab.com/3d-models/diving-helmet-5073ee26106a467492e4943905c57ce2) by Nadir Alishly (https://sketchfab.com/nadiralishly) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
