@@ -2,7 +2,16 @@ import './style.scss'
 
 import "./js/getOrder";
 
-import * as THREE from "three";
+import {
+  Scene,
+  WebGLRenderer,
+  Fog,
+  PerspectiveCamera,
+  DirectionalLight,
+  HemisphereLight,
+} from "three";
+
+// import * as THREE from "three";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 // import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
@@ -19,8 +28,8 @@ const windowHalfX = window.innerWidth / 2;
 const windowHalfY = window.innerHeight / 2;
 
 function init() {
-  const scene = new THREE.Scene();
-  const renderer = new THREE.WebGLRenderer({
+  const scene = new Scene();
+  const renderer = new WebGLRenderer({
     canvas,
     alpha: true,
     premultipliedAlpha: false,
@@ -30,7 +39,7 @@ function init() {
     const near = 1;
     const far = 900;
     const color = "rgba(52, 52, 145, 1)";
-    scene.fog = new THREE.Fog(color, near, far);
+    scene.fog = new Fog(color, near, far);
   }
   // scene.background = new THREE.Color(color);
 
@@ -38,7 +47,7 @@ function init() {
   const aspect = 2; // the canvas default
   const near = 0.1;
   const far = 1000;
-  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  const camera = new PerspectiveCamera(fov, aspect, near, far);
 
   camera.position.z = 300;
 
@@ -48,7 +57,7 @@ function init() {
 
   {
     const intensity = 1;
-    const light = new THREE.DirectionalLight(0xffffff, intensity);
+    const light = new DirectionalLight(0xffffff, intensity);
     light.position.set(0, 100, 200);
     scene.add(light);
   }
@@ -57,14 +66,14 @@ function init() {
     const skyColor = 0xb1e1ff; // light blue
     const groundColor = 0xb97a20; // brownish orange
     const intensity = 1;
-    const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
+    const light = new HemisphereLight(skyColor, groundColor, intensity);
     scene.add(light);
   }
 
   {
     const color = 0xffffff;
     const intensity = 1;
-    const light = new THREE.DirectionalLight(color, intensity);
+    const light = new DirectionalLight(color, intensity);
     light.position.set(5, 10, 2);
     scene.add(light);
     scene.add(light.target);
@@ -115,6 +124,8 @@ function init() {
     camera.updateProjectionMatrix();
 
     renderer.render(scene, camera);
+
+    renderer.setPixelRatio(window.devicePixelRatio * 0.5);
 
     requestAnimationFrame(render);
   }
