@@ -125,7 +125,7 @@ function init() {
 
     renderer.render(scene, camera);
 
-    renderer.setPixelRatio(window.devicePixelRatio * 0.5);
+    renderer.setPixelRatio(window.devicePixelRatio * 0.6);
 
     requestAnimationFrame(render);
   }
