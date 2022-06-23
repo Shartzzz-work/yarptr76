@@ -1,0 +1,68 @@
+#team {
+  article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    // column-gap: 1em;
+    // column-gap: 0;
+    background: none;
+  }
+
+  h1 {
+    grid-area: 1 / 1 / 2 / 3;
+    background: #fff;
+    padding: 1em 0;
+  }
+
+  h2 {
+    color: #fff;
+    text-align: center;
+    margin-top: 1em;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  section {
+    padding-top: 1em;
+    display: block;
+    max-width: 800px;
+    background: #fff;
+    // margin-top: 2em;
+    // padding-top: 2em;
+    // border-top: 8px solid #bfe2ff;
+
+    // clip-path: none;
+
+        clip-path: polygon(
+      calc(100% - 50px) 0,
+      100% 78px,
+      100% 100%,
+      40px 100%,
+      0 100%,
+      0 0
+    );
+  }
+
+  form {
+    padding: 2em;
+    margin: 1em 0 0 1em;
+  }
+
+  @media (max-width: 850px) {
+    article {
+      display: block;
+    }
+
+    section {
+      clip-path: none;
+      margin-top: 2em;
+    }
+
+    form {
+      margin: 2em auto 0;
+      max-width: 380px;
+      padding: 1em;
+    }
+  }
+}
