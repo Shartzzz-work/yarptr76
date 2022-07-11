@@ -172,7 +172,7 @@
       "count": 65532,
       "max": [
         134.1943817138672,
-        84.56645202636719,
+        84.32040405273438,
         128.0863037109375
       ],
       "min": [
@@ -218,14 +218,14 @@
       "bufferView": 0,
       "byteOffset": 2446032,
       "componentType": 5125,
-      "count": 180081,
+      "count": 182418,
       "type": "SCALAR"
     },
     {
       "bufferView": 2,
       "byteOffset": 4229424,
       "componentType": 5126,
-      "count": 30945,
+      "count": 30330,
       "max": [
         133.4156036376953,
         138.2400360107422,
@@ -240,9 +240,9 @@
     },
     {
       "bufferView": 2,
-      "byteOffset": 4600764,
+      "byteOffset": 4593384,
       "componentType": 5126,
-      "count": 30945,
+      "count": 30330,
       "max": [
         1.0,
         1.0,
@@ -259,7 +259,7 @@
       "bufferView": 1,
       "byteOffset": 1409808,
       "componentType": 5126,
-      "count": 30945,
+      "count": 30330,
       "max": [
         1.2504405975341797,
         1.135254144668579
@@ -272,14 +272,14 @@
     },
     {
       "bufferView": 0,
-      "byteOffset": 3166356,
+      "byteOffset": 3175704,
       "componentType": 5125,
-      "count": 124380,
+      "count": 122043,
       "type": "SCALAR"
     },
     {
       "bufferView": 2,
-      "byteOffset": 4972104,
+      "byteOffset": 4957344,
       "componentType": 5126,
       "count": 21850,
       "max": [
@@ -296,7 +296,7 @@
     },
     {
       "bufferView": 2,
-      "byteOffset": 5234304,
+      "byteOffset": 5219544,
       "componentType": 5126,
       "count": 21850,
       "max": [
@@ -313,7 +313,7 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 1657368,
+      "byteOffset": 1652448,
       "componentType": 5126,
       "count": 21850,
       "max": [
@@ -341,7 +341,7 @@
       "source": "https://sketchfab.com/3d-models/diving-helmet-5073ee26106a467492e4943905c57ce2",
       "title": "Diving helmet"
     },
-    "generator": "Sketchfab-10.61.0",
+    "generator": "Sketchfab-12.67.0",
     "version": "2.0"
   },
   "bufferViews": [
@@ -353,7 +353,7 @@
     },
     {
       "buffer": 0,
-      "byteLength": 1832168,
+      "byteLength": 1827248,
       "byteOffset": 4001232,
       "byteStride": 8,
       "name": "floatBufferViews",
@@ -361,8 +361,8 @@
     },
     {
       "buffer": 0,
-      "byteLength": 5496504,
-      "byteOffset": 5833400,
+      "byteLength": 5481744,
+      "byteOffset": 5828480,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -370,7 +370,7 @@
   ],
   "buffers": [
     {
-      "byteLength": 11329904,
+      "byteLength": 11310224,
       "uri": "scene.bin"
     }
   ],

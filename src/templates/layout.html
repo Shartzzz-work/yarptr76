@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <meta name="author" content="Shartzzz" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Подводные технические решения</title>
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <title>{{ title }}</title>
   </head>
 
   <body>
-    {% include "./blocks/header/header.html" %}
-
-{% block content %}
-{% endblock %}
-
-{% include "./blocks/footer/footer.html" %}
-
-{% include "./blocks/popup/popup.html" %}
+    {% include "./blocks/header/header.html" %} {% block content %} {% endblock
+    %} {% include "./blocks/footer/footer.html" %} {% include
+    "./blocks/popup/popup.html" %}
 
     <script type="module" src="/main.js"></script>
   </body>

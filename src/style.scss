@@ -350,6 +350,7 @@ main {
   // grid-template-rows: auto 1fr;
   background: #fff;
   color: #000;
+  font-size: 1.1em;
 
   h1 {
     // grid-area: 1 / 1 / 2 / 3;
@@ -372,6 +373,7 @@ main {
     // background: #fff;
     padding: 0 40px 40px;
     gap: 2em;
+    // font-size: 1.1em;
 
     & > * {
       flex: 1;
@@ -557,6 +559,7 @@ main {
   }
 
   .article {
+    font-size: 1em;
 h1 {
   padding: 1em 10px;
   // margin-bottom: 1em;

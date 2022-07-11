@@ -10,6 +10,8 @@ import {
 // import * as THREE from "three";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+// import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+// import * as draco from "three/examples/js/libs/draco/";
 // import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
 
 const canvas = document.querySelector("canvas");
@@ -29,6 +31,7 @@ function init() {
     canvas,
     alpha: true,
     premultipliedAlpha: false,
+    antialias: true,
   });
 
   {
@@ -45,7 +48,7 @@ function init() {
   const far = 1000;
   const camera = new PerspectiveCamera(fov, aspect, near, far);
 
-  camera.position.z = 300;
+  camera.position.z = 310;
 
   // const controls = new OrbitControls(camera, canvas);
   // controls.target.set(0, 5, 0);
@@ -85,16 +88,35 @@ function init() {
   // const axesHelper = new THREE.AxesHelper(1000);
   // scene.add(axesHelper);
 
-  const gltfLoader = new GLTFLoader();
-  const url = "../model/diving_helmet3/scene.gltf";
+  // const gltfLoader = new GLTFLoader();
+  const url = "/model/diving_helmet3/scene.gltf";
 
-  gltfLoader.load(url, (gltf) => {
+  // const dracoLoader = new DRACOLoader();
+  // dracoLoader.setDecoderPath("three/examples/js/libs/draco/");
+  // dracoLoader.setDecoderConfig({ type: "js" });
+
+  const loader = new GLTFLoader();
+  // loader.setDRACOLoader(dracoLoader);
+
+  loader.load(url, (gltf) => {
     const root = gltf.scene;
     helmet = root.children[0];
+    // let box3 = new THREE.Box3().setFromObject(helmet);
+    // let center = new THREE.Vector3();
+    // box3.getCenter(center);
+    // helmet.position.sub(center);
     helmet.position.y = -130;
     helmet.rotateZ(4.7);
 
     scene.add(helmet);
+
+    // let model = gltf.scene;
+    // let box3 = new THREE.Box3().setFromObject(model);
+    // let center = new THREE.Vector3();
+    // box3.getCenter(center);
+    // model.position.sub(center);
+    // scene.add(model);
+    // console.log(model);
   });
 
   document.addEventListener("mousemove", onDocumentMouseMove);

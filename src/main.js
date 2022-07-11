@@ -28,18 +28,18 @@ document.addEventListener("click", (e) => {
       break;
 
     case e.target.name === "getOrder":
-      orderConfirm.style.display = "none";
+      // orderConfirm.style.display = "none";
       popupHTML.style.display = "flex";
-      getOrderForm.style.display = "grid";
+      // getOrderForm.style.display = "grid";
       break;
 
-    case e.target.name === "sendOrder":
-      e.preventDefault();
-      getOrderForm.style.display = "none";
-      orderConfirm.style.display = "grid";
+    // case e.target.name === "sendOrder":
+    //   e.preventDefault();
+    //   getOrderForm.style.display = "none";
+    //   orderConfirm.style.display = "grid";
 
-      setTimeout(() => (popupHTML.style.display = "none"), 2000);
-      break;
+    //   setTimeout(() => (popupHTML.style.display = "none"), 2000);
+    //   break;
 
     default:
       break;
